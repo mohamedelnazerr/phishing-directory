@@ -1,0 +1,21 @@
+# Kubernetes credentials / certificates
+*.key
+*.crt
+*.csr
+
+# Kubernetes local configuration
+kubeconfig
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment / secrets
+.env
+.env.*
+
+# OS / editor files
+.DS_Store
+.vscode/
