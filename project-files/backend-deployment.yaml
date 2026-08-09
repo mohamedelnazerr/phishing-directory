@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: default
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: backend
+
+  template:
+    metadata:
+      labels:
+        app: backend
+
+    spec:
+      containers:
+        - name: backend
+          image: mohamedelnazerr/paypal-backend:1.0
+
+          ports:
+            - containerPort: 5000
+
+          env:
+            - name: DB_HOST
+              value: mysql-service
+
+            - name: DB_USER
+              value: demo
+
+            - name: DB_PASSWORD
+              value: demo
+
+            - name: DB_NAME
+              value: phishing_database

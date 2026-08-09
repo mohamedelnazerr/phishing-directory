@@ -19,3 +19,4 @@ venv/
 # OS / editor files
 .DS_Store
 .vscode/
+*.srl
